@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: customer_account
+        description: "Raw link between customer and account entities"
+        columns:
+          - name: customer_id
+            description: "Business key for customer"
+          - name: account_id
+            description: "Business key for account"
+          - name: relationship_type
+            description: "Type of relationship (e.g., Primary, Co-Holder)"
+          - name: account_status
+            description: "Status of the account"
+          - name: effective_date
+            description: "Date the relationship became effective"
+          - name: load_date
+            description: "Timestamp when the record was loaded"
+          - name: record_source
+            description: "Origin system for the data"
